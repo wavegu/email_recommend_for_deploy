@@ -1,0 +1,5 @@
+by_product/*
+*.pyc
+.DS_Store
+.idea/*
+

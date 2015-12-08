@@ -1,0 +1,151 @@
+[
+    {
+        "name": "Vladimir Vapnik",
+        "n_pubs": 59,
+        "name_cn": "",
+        "n_citation": 25024,
+        "affiliation_cn": "",
+        "affiliation": "Bell Laboratories",
+        "id": "53f4ba36dabfaed83977b7aa",
+        "contact": {
+            "homepage": "http://www.clrc.rhul.ac.uk/people/vlad/",
+            "msdate": "1958",
+            "bio": "Professor Vapnik gained his Masters Degree in Mathematics in 1958 at Uzbek State University, Samarkand, USSR. From 1961 to 1990 he worked at the Institute of Control Sciences, Moscow, where he became Head of the Computer Science Research Department. He then joined AT&T Bell Laboratories , Holmdel, NJ, where he now continues as a Consultant, having been appointed Professor of Computer Science and Statistics at Royal Holloway in 1995.\n\nProfessor Vapnik has taught and researched in computer science, theoretical and applied statistics for over 30 years. He has published 6 monographs and over a hundred research papers. His major achievements have been the development of a general theory for minimizing the expected risk of losses using empirical data, and a new type of learning machine called Support Vector machine that possesses a high level of generalization ability. These techniques have been used to solve many pattern recognition and regression estimation problems and have been applied to the problems of dependency estimation, forecasting, and constructing intelligent machines.\n\nHe was one of the invited speakers at the Colloquium \"The Importance of being Learnable\" hosted by the Computer Learning Research Centre at Royal Holloway in September 1998. His current research is presented in his latest book \"Statistical Learning Theory\", ISBN No: 0-471-03003-1.\n\nOn the 10th of February 2006 the National Academy of Engineering (NAE) of USA elected Professor Vapnik as a new member for \"insights into the fundamental complexities of learning and for inventing practical and widely applied machine-learning algorithms\".",
+            "email": "Vladimir.Vapnik@rhul.ac.uk",
+            "address": "The Computer Learning Research Centre\nRoyal Holloway, University of London\nEgham\nSurrey\nTW20 0EX\nUnited Kingdom",
+            "position": "Professor",
+            "msuniv": "Uzbek State University",
+            "fax": "+44 1784 439786",
+            "msmajor": " Mathematics ",
+            "affiliation": "Department of Computer Science, University of London",
+            "phone": "+44 1784 443673"
+        },
+        "h_index": 34
+    },
+    {
+        "name": "David J. Lipman",
+        "n_pubs": 55,
+        "name_cn": "",
+        "n_citation": 60767,
+        "affiliation_cn": "",
+        "affiliation": "National Center for Biotechnology Information|National Library of Medicine|National Institutes of Health",
+        "id": "53f48458dabfaee4dc8b08e4",
+        "contact": {
+            "homepage": "http://www.ncbi.nlm.nih.gov/CBBresearch/Lipman/",
+            "msdate": "1980",
+            "bsuniv": "Brown University",
+            "email": "lipman@ncbi.nlm.nih.gov",
+            "address": "NCBI, NLM, NIH\r\nBuilding 38A, Room 8N807\r\n8600 Rockville Pike\r\nBethesda, MD 20894 \r\n",
+            "position": "Director",
+            "msuniv": "University of New York ",
+            "fax": "301-480-9241\r\n",
+            "bsdate": "1976",
+            "affiliation": "NCBI",
+            "phone": "301-496-2475\r\n"
+        },
+        "h_index": 30
+    },
+    {
+        "name": "Michael C. Jensen",
+        "n_pubs": 152,
+        "name_cn": "",
+        "n_citation": 9683,
+        "affiliation_cn": "",
+        "affiliation": "Harvard Business School",
+        "id": "53f4523cdabfaee4dc8014b9",
+        "contact": {
+            "work": "",
+            "homepage": "http://www.people.hbs.edu/mjensen/",
+            "bio": "MICHAEL C. JENSEN, Jesse Isidor Straus Professor of Business Administration, Emeritus, joined the faculty of the Harvard Business School in 1985 founding what is now the Negotiations, Organizations and Markets Unit in the School. He joined the Monitor Company in 2000 as Managing Director of the Organizational Strategy Practice, became Senior Advisor in 2007 and as of 2009 is no longer associated with Monitor. He was LaClare Professor of Finance and Business Administration at the William E. Simon Graduate School of Business Administration, University of Rochester from 1984-1988, Professor from 1979-1984, Associate Professor from 1971-1979, and Assistant Professor from 1967-1971. He founded the Managerial Economics Research Center at the University of Rochester in 1977 and served as its Director until 1988.\n\nProfessor Jensen earned his Ph.D. in Economics, Finance, and Accounting and his M.B.A. in Finance from the University of Chicago and an A.B. degree from Macalester College. He was awarded honorary Doctor of Laws degrees, Docteur Honoris Causa, by Universite Catholique de Louvain, Louvain-la-Neuve, Belgium, July, 1991; by the University of Bern, Bern, Switzerland, December 2000; by the William E. Simon Graduate School of Business Administration, University of Rochester, Rochester, NY, June, 2001; by the University of Toronto, June 2005 and by the Georgetown University McDonough School of Business in May 2011. He was named Honoris Causa Professor by HEC Business School, Paris, France, Nov. 2006.\n\nProfessor Jensen is the author of more than 100 scientific papers, in addition to numerous articles, comments, and editorials published in the popular media on a wide range of economic, finance and business-related topics. Most of his papers are downloadable from his SSRN Author Page at: http://ssrn.com/author=9. He is author of Foundations of Organizational Strategy (Harvard University Press, 1998), and Theory of the Firm: Governance, Residual Claims, and Organizational Forms (Harvard University Press, 2000). He is editor of The Modern Theory of Corporate Finance (with Clifford W. Smith, Jr., McGraw-Hill, 1984) and Studies in the Theory of Capital Markets (Praeger Publishers, 1972). His book co-authored with Kevin Murphy and Eric Wruck, CEO Pay and What to Do About It: Restoring Integrity to Both Executive Compensation and Capital-Market Relations will be published by Harvard Business School Press in 2012.\n\nIn 1973 Professor Jensen co-founded (with Eugene Fama and Robert Merton) the Journal of Financial Economics, one of the top three scientific journals in financial economics, serving as Managing Editor from 1987 to 1997, when he became Founding Editor. From 1992 through 1998 he served on the steering committee of the Mind Brain Behavior Initiative at Harvard University (a Harvard interfaculty effort to bring together a wide range of scholars interested in understanding the limitations of the human brain and its role in generating counter-productive human behavior). In 1994 he co-founded and is currently Chairman of Social Science Electronic Publishing, Inc. (SSEP) which is devoted to the electronic publication of scientific working papers in the social sciences http://ssrn.com.. Since 2003 Jensen has been a member of the Barbados Group, a worldwide group of a dozen scholars, including philosophers, economists, psychologists, technologists, and educators to develop the ontological foundations of performance. \nDr. Jensen has served as consultant and board member to various corporations, foundations and governmental agencies and has given expert testimony before congressional and state committees and state and federal courts. He currently serves on the Advisory Boards of ESADE Business School and the Gruter Institute for Law and Behavioral Research. He has lectured widely at seminars, meetings, conventions and educational institutions. He is Past President of the American Finance Association and the Western Economic Association International.\n\nProfessor Jensen's major research interests now include \"The Ontological Laws of Human Nature\", \"A Positive Theory of the Normative Virtues\", \"Being A Leader and the Effective Exercise of Leadership: An Ontological Approach\", and \"The Three Foundations of a Great Personal Life, Great Leadership and a Great Company: Integrity, Authenticity, and Committed to Something Bigger than Oneself\".",
+            "email": "mjensen@hbs.edu",
+            "address": "Harvard University Graduate School of Business Administration Baker Library 265",
+            "position": "Chairman",
+            "edu": "",
+            "affiliation": "Harvard University Graduate School of Business Administration Baker Library",
+            "fax": "(305) 675-3166",
+            "phone": "(617) 495-6058"
+        },
+        "h_index": 25
+    },
+    {
+        "name": "David E. Goldberg",
+        "n_pubs": 392,
+        "name_cn": "",
+        "n_citation": 170170,
+        "affiliation_cn": "",
+        "affiliation": "University of Illinois at Urbana-Champaign, Urbana, IL",
+        "id": "53f48cb0dabfaea88d77b3ba",
+        "contact": {
+            "work": "David Edward Goldberg (1953) is an American computer scientist, civil engineer, and professor at the department of Industrial and Enterprise Systems Engineering (IESE) at the University of Illinois at Urbana-Champaign and is most noted for his work in the field of genetic algorithms. He is the director of the Illinois Genetic Algorithms Laboratory  (IlliGAL) and the chief scientist of Nextumi Inc. He is the author of Genetic Algorithms in Search, Optimization and Machine Learning, one of the most cited books in computer science.",
+            "phduniv": "University of Michigan",
+            "email": "deg at illinois.edu",
+            "address": "117 Transportation Building MC-238\n104 S. Mathews Ave.\nUrbana IL 61801",
+            "position": "Professor,Director\n",
+            "phddate": "1983",
+            "fax": "(217) 244-5705 ",
+            "bsuniv": "University of Michigan",
+            "phone": "(217) 333-0897 ",
+            "homepage": "http://en.wikipedia.org/wiki/David_E._Goldberg",
+            "msdate": "1976",
+            "bio": "David Edward Goldberg (1953) is an American computer scientist, civil engineer, and professor at the department of Industrial and Enterprise Systems Engineering (IESE) at the University of Illinois at Urbana-Champaign and is most noted for his work in the field of genetic algorithms. He is the director of the Illinois Genetic Algorithms Laboratory (IlliGAL) and the chief scientist of Nextumi Inc. He is the author of Genetic Algorithms in Search, Optimization and Machine Learning, one of the most cited books in computer science.\nDavid E. Goldberg received a PhD in civil engineering in 1983 from the University of Michigan. His advisors were E. Benjamin Wylie and John Henry Holland. He has collaborated with several evolutionary computation scientists including Kalyanmoy Deb, Jeff Horn, and Hillol Kargupta. In 2003 David Goldberg was appointed as the first holder of Jerry S. Dobrovolny Professorship in Entrepreneurial Engineering at the University of Illinois at Urbana-Champaign.\nPublications:\n1983. Computer-aided gas pipeline operation using genetic algorithms and rule learning, PhD thesis. University of Michigan. Ann Arbor, MI.\n1989. Genetic algorithms in search, optimization and machine learning. Addison-Wesley.\n1991. Real-coded genetic algorithms. Virtual alphabets, and blocking. Complex Systems 5, pp. 139–167.\n1995. Life Skills and Leadership for Engineers. McGraw Hill.\n2002. The design of innovation: Lessons from and for competent genetic algorithms. Kluwer Academic Publishers.\n2006. The entrepreneurial engineer. Wiley.",
+            "bsmajor": "Civil Engineering",
+            "edu": "David E. Goldberg received a PhD in civil engineering in 1983 from the University of Michigan. His advisors were E. Benjamin Wylie and John Henry Holland. He has collaborated with several evolutionary computation scientists including Kalyanmoy Deb, Jeff Horn, and Hillol Kargupta.\nIn 2003 David Goldberg was appointed as the first holder of Jerry S. Dobrovolny Professorship in Entrepreneurial Engineering at the University of Illinois at Urbana-Champaign.",
+            "msuniv": "University of Michigan",
+            "affiliation": "Illinois Genetic Algorithms Laboratory",
+            "msmajor": "Civil Engineering",
+            "phdmajor": "Civil Engineering",
+            "bsdate": "1975"
+        },
+        "h_index": 61
+    },
+    {
+        "name": "Shizuo Akira",
+        "n_pubs": 607,
+        "name_cn": "審良 静男",
+        "n_citation": 10291,
+        "affiliation_cn": "",
+        "affiliation": "Department of Host Defense, Research Institute for Microbial Diseases, Osaka University, Osaka 565-0871, Japan",
+        "id": "5488723bdabfae8a11fb435b",
+        "contact": {
+            "work": "He is the recipient of several international awards, including the Gairdner Foundation International Award, Robert Koch Prize, the Milstein Award, and the William B. Coley Award.",
+            "homepage": "http://en.wikipedia.org/wiki/Shizuo_Akira",
+            "bio": "Shizuo Akira (審良 静男 Akira Shizuo?), M.D., Ph.D., (born January 27, 1953 in Higashiōsaka)is a professor at the Department of Host Defense, Osaka University, Japan. He has made ground-breaking discoveries in the field of immunology, most significantly in the area of innate host defense mechanisms.\n\nBeside being the world's most-cited scientist, he has also been recognised, in the years 2006 and 2007, as having published the greatest number of ‘Hot Papers’ (11 papers) over the preceding two years. He is the recipient of several international awards, including the Gairdner Foundation International Award, Robert Koch Prize, the Milstein Award, and the William B. Coley Award.\n\nAmong his greatest discoveries is the demonstration, through the ablation of toll-like receptor (TLR)s genes, that TLRs recognize a descrete collection of molecules of microbal origin,and later the RNA helicases, RIG-I (retinoic-acid-inducible protein I) and MDA5 (melanoma differentiation-associated protein 5). All molecules belong to the pattern recognition receptors, which detects intruding pathogens and initiates antimicrobial responses in the host.",
+            "email": "",
+            "address": "",
+            "position": "Professor",
+            "edu": "Shizuo Akira (審良 静男 Akira Shizuo?), M.D., Ph.D., (born January 27, 1953 in Higashiōsaka)is a professor at the Department of Host Defense, Osaka University, Japan.He has made ground-breaking discoveries in the field of immunology, most significantly in the area of innate host defense mechanisms.",
+            "affiliation": "Osaka University",
+            "fax": "",
+            "phone": ""
+        },
+        "h_index": 48
+    },
+    {
+        "name": "Daniel Kahneman",
+        "n_pubs": 133,
+        "name_cn": "",
+        "n_citation": 19042,
+        "affiliation_cn": "",
+        "affiliation": "Hebrew U., Jerusalem, Israel",
+        "id": "5486e39ddabfae9b401340ce",
+        "contact": {
+            "work": "Kahneman began his academic career as a lecturer in psychology at the Hebrew University of Jerusalem in 1961. He was promoted to senior lecturer in 1966. His early work focused on visual perception and attention. For example, his first publication in the prestigious journal Science was entitled \"Pupil Diameter and Load on Memory\" (Kahneman & Beatty, 1966). During this period, Kahneman was a visiting scientist at the University of Michigan (1965–66) and the Applied Psychology Research Unit in Cambridge (1968/1969, summers). He was a fellow at the Center for Cognitive Studies and a lecturer in psychology at Harvard University in 1966/1967.",
+            "homepage": "https://en.wikipedia.org/wiki/Daniel_Kahneman",
+            "affiliation": "Princeton University's Woodrow Wilson School",
+            "bio": "Daniel Kahneman (Hebrew: דניאל כהנמן‎, born March 5, 1934) is an Israeli-American psychologist notable for his work on the psychology of judgment and decision-making, as well as behavioral economics, for which he was awarded the 2002 Nobel Memorial Prize in Economic Sciences (shared with Vernon L. Smith). His empirical findings challenge the assumption of human rationality prevailing in modern economic theory.With Amos Tversky and others, Kahneman established a cognitive basis for common human errors that arise from heuristics and biases (Kahneman & Tversky, 1973; Kahneman, Slovic & Tversky, 1982; Tversky & Kahneman, 1974), and developed prospect theory (Kahneman & Tversky, 1979). He was awarded the 2002 Nobel Memorial Prize in Economics for his work in prospect theory.In 2011, he was named by Foreign Policy magazine to its list of top global thinkers.In the same year, his book Thinking, Fast and Slow, which summarizes much of his research, was published and became a best seller.He is professor emeritus of psychology and public affairs at Princeton University's Woodrow Wilson School. Kahneman is a founding partner of TGG Group, a business and philanthropy consulting company. He is married to Royal Society Fellow Anne Treisman.In 2015 The Economist listed him as the seventh most influential economist in the world.",
+            "position": "professor emeritus"
+        },
+        "h_index": 42
+    },
+    {
+        "name": "Stephen F. Altschul",
+        "n_pubs": 14,
+        "name_cn": "",
+        "n_citation": 2468,
+        "affiliation_cn": "",
+        "affiliation": "National Center for Biotechnology Information|National Library of Medicine|National Institutes of Health",
+        "id": "53f493ebdabfaeb22f5721de",
+        "contact": {},
+        "h_index": 10
+    }
+]
