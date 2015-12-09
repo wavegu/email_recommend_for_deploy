@@ -1,4 +1,8 @@
 # email推荐系统
+
+##代码管理
+* git remote add origin https://wavegu@bitbucket.org/email\_recommender/email\_recommender.git
+
 ##输入
 * json格式
 * [{'name': 'Eric', 'affiliation': 'Tsinghua University'}]
@@ -31,3 +35,4 @@
 		* parse输出结果，判断正负
 		* 正例加入email_list(这里可以设置阈值，通过放宽和锁紧阈值来调整正例判断的依据)
 		* email\_recommender/result/recommend_result.json
+

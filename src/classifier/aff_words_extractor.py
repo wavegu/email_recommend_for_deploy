@@ -13,6 +13,10 @@ class AffWordsExtractor:
     def get_person_dict_with_aff_words_list(self):
         person_dict_with_aff_words_list = []
         for person_dict in self.raw_person_dict_list:
+            if 'affiliation' not in person_dict or not person_dict['affiliation']:
+                person_dict['affiliation'] = ''
+                person_dict['affiliation_words'] = ''
+                continue
             aff = person_dict['affiliation']
 
             aff = aff.replace('\n', ' ')

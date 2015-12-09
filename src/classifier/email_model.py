@@ -47,7 +47,7 @@ class EmailModel:
     def get_f_contain_last_name(self):
         last_name = self.person_name.split(' ')[-1]
         addr_prefix = self.email_addr[:self.email_addr.find('@')]
-        return float(last_name in self.email_addr) * float(len(last_name)) / (float(len(addr_prefix))+1)
+        return float(last_name in addr_prefix) * float(len(last_name)) / (float(len(addr_prefix))+1)
 
     def get_f_addr_repeat_time(self):
         return float(self.brother_email_addr_list.count(self.email_addr)) / float(len(self.brother_email_addr_list))

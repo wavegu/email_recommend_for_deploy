@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 import json
+
+from svm import SVMLight
 from util import is_a_in_b
 from email_model import EmailModel
 
@@ -65,14 +67,11 @@ class Person:
 
                 self.email_email_model_dict[email_addr] = tem_email_model
 
-
-def write_feature_file(person_dict_list, feature_filename):
-    with open(feature_filename, 'w') as feature_file:
-        for person_dict in person_dict_list:
-            person = Person(person_dict, '../resource/Top1000_mail_list/')
-            if not person.google_item_dict_list:
-                continue
-            for email_addr, email_model in person.email_email_model_dict.items():
+    def write_feature_file(self, feature_dir_path):
+        feature_file_path = feature_dir_path + self.name.replace(' ', '_') + '.feature'
+        with open(feature_file_path, 'w') as feature_file:
+            print 'writing feature:', self.name
+            if not self.google_item_dict_list:
+                return
+            for email_addr, email_model in self.email_email_model_dict.items():
                 feature_file.write(email_model.get_feature_line() + '\n')
-
-
