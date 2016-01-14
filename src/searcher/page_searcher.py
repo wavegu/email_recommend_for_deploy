@@ -14,18 +14,18 @@ sys.setdefaultencoding('utf8')
 
 class PageSearcher:
 
-    def __init__(self, keyword, person_dict_list, result_path):
+    def __init__(self, keyword_list, person_dict_list, result_path):
         self.names = []
         self.ok_name_list = []
         self.error_name_list = []
-        self.keyword = keyword
+        self.keyword_list = keyword_list
         self.result_path = result_path
         self.person_dict_list = person_dict_list
 
-    def get_page_file_path(self, person_id):
-        return self.result_path + person_id + '/' + self.keyword.replace(' ', '_') + '.html'
+    def get_page_file_path(self, person_id, keyword):
+        return self.result_path + person_id + '/' + keyword.replace(' ', '_') + '.html'
 
-    def get_google_page_from(self, person_dict, search_helper):
+    def get_google_page_from(self, person_dict, keyword, search_helper):
         person_id = person_dict['id']
         name = person_dict['name'].replace('\n', '')
         # print '******', name, '*******'
@@ -37,10 +37,10 @@ class PageSearcher:
         if not os.path.exists(personal_path):
             os.mkdir(personal_path)
         # 打开文件
-        search_page_cache_file = open(self.get_page_file_path(person_id), 'w')
+        search_page_cache_file = open(self.get_page_file_path(person_id, keyword), 'w')
         try:
             # 获取搜索主页，并保存在个人文件夹下
-            search_page_content = search_helper.get_search_page_by_name(name + ' ' + self.keyword)
+            search_page_content = search_helper.get_search_page_by_name(name + ' ' + keyword)
             if search_page_content is None:
                 self.error_name_list.append(name)
                 print '[Error]@EmailSearcher.get_google_page_from(): search_page_content is None'
@@ -80,16 +80,18 @@ class PageSearcher:
                         print 'starting from', person_dict['name']
                 if not flag:
                     continue
-                self.get_google_page_from(person_dict, GoogleHelper())
+                for keyword in self.keyword_list:
+                    self.get_google_page_from(person_dict, keyword, GoogleHelper())
         except Exception as e:
             print e
 
     def refresh_empty_pages(self):
         for person_dict in self.person_dict_list:
             try:
-                with open(self.get_page_file_path(person_dict['id'])) as search_page:
-                    if len(search_page.read()) < 10:
-                        self.get_google_page_from(person_dict, GoogleHelper())
+                for keyword in self.keyword_list:
+                    with open(self.get_page_file_path(person_dict['id'], keyword)) as search_page:
+                        if len(search_page.read()) < 10:
+                            self.get_google_page_from(person_dict, keyword, GoogleHelper())
             except Exception as e:
                 print e
 

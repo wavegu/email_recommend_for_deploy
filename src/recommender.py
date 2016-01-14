@@ -46,7 +46,8 @@ class EmailRecommender:
 
     def get_google_pages(self):
         from searcher.page_searcher import PageSearcher
-        google_page_searcher = PageSearcher('email', self.person_dict_list, self.output_google_page_dir_path)
+        keyword_list = ['email', 'his', 'her']
+        google_page_searcher = PageSearcher(keyword_list, self.person_dict_list, self.output_google_page_dir_path)
         google_page_searcher.start_from('')
         google_page_searcher.refresh_empty_pages()
 
@@ -113,6 +114,6 @@ class EmailRecommender:
 if __name__ == '__main__':
     recommender = EmailRecommender()
     recommender.get_google_pages()
-    recommender.get_google_items()
-    recommender.write_recommend_json()
-    recommender.write_result_csv()
+    # recommender.get_google_items()
+    # recommender.write_recommend_json()
+    # recommender.write_result_csv()
