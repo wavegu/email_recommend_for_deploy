@@ -36,8 +36,9 @@ class GoogleItemParser(HTMLParser):
     search for e-mail address from search page
     """
 
-    def __init__(self, input_google_pages_path, output_google_items_path):
+    def __init__(self, person_dict_list, input_google_pages_path, output_google_items_path):
         HTMLParser.__init__(self)
+        self.person_dict_list = person_dict_list
         self.tem_googleItem = GoogleItem()
         self.is_in_title = False
         self.is_in_content = False
@@ -129,18 +130,19 @@ class GoogleItemParser(HTMLParser):
         if not os.path.isdir(self.output_google_items_path):
             os.mkdir(self.output_google_items_path)
         counter = 0
-        for person in os.listdir(self.input_google_pages_path):
-            google_item_file_path = self.output_google_items_path + person + '.json'
-            if person + '.json' in os.listdir(self.output_google_items_path):
+        for person_dict in self.person_dict_list:
+            person_id = person_dict['id']
+            google_item_file_path = self.output_google_items_path + person_id + '.json'
+            if person_id + '.json' in os.listdir(self.output_google_items_path):
                 continue
-            if not os.path.isdir(self.input_google_pages_path + person):
+            if not os.path.isdir(self.input_google_pages_path + person_id):
                 continue
             counter += 1
-            print 'parsing item: [%d] %s\n' % (counter, person)
-            google_page_file_path = os.listdir(self.input_google_pages_path + person)[0]
-            for filename in os.listdir(self.input_google_pages_path + person):
+            print 'parsing item: [%d] %s\n' % (counter, person_id)
+            google_page_file_path = os.listdir(self.input_google_pages_path + person_id)[0]
+            for filename in os.listdir(self.input_google_pages_path + person_id):
                 if '.html' in filename and '~' not in filename:
-                    google_page_file_path = self.input_google_pages_path + person + '/' + filename
+                    google_page_file_path = self.input_google_pages_path + person_id + '/' + filename
                     break
             google_page_content = open(google_page_file_path).read()
 

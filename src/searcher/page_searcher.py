@@ -4,8 +4,12 @@ import os
 import random
 import time
 import json
+import sys
 
 from search_helper.search_helper import GoogleHelper
+
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 
 class PageSearcher:
@@ -18,13 +22,14 @@ class PageSearcher:
         self.result_path = result_path
         self.person_dict_list = person_dict_list
 
-    def get_page_file_path(self, person_name):
-        return self.result_path + person_name + '/' + self.keyword.replace(' ', '_') + '.html'
+    def get_page_file_path(self, person_id):
+        return self.result_path + person_id + '/' + self.keyword.replace(' ', '_') + '.html'
 
-    def get_google_page_from(self, person_name, search_helper):
-        name = person_name.replace('\n', '')
-        print '******', name, '*******'
-        personal_path = self.result_path + name + '/'
+    def get_google_page_from(self, person_dict, search_helper):
+        person_id = person_dict['id']
+        name = person_dict['name'].replace('\n', '')
+        # print '******', name, '*******'
+        personal_path = self.result_path + person_id + '/'
         # 建立搜索引擎文件夹
         if not os.path.exists(self.result_path):
             os.mkdir(self.result_path)
@@ -32,7 +37,7 @@ class PageSearcher:
         if not os.path.exists(personal_path):
             os.mkdir(personal_path)
         # 打开文件
-        search_page_cache_file = open(self.get_page_file_path(person_name), 'w')
+        search_page_cache_file = open(self.get_page_file_path(person_id), 'w')
         try:
             # 获取搜索主页，并保存在个人文件夹下
             search_page_content = search_helper.get_search_page_by_name(name + ' ' + self.keyword)
@@ -60,29 +65,31 @@ class PageSearcher:
             return False
         return True
 
-    def start_from(self, start_name):
+    def start_from(self, start_id):
         flag = False
-        person_name_list = [person_dict['name'] for person_dict in self.person_dict_list]
+        # person_name_list = [person_dict['name'] for person_dict in self.person_dict_list]
         try:
-            for person_name in person_name_list:
-                if person_name in os.listdir(self.result_path):
+            for person_dict in self.person_dict_list:
+                person_id = str(person_dict['id'])
+                print 'Getting google page', person_id
+                if person_id in os.listdir(self.result_path):
                     continue
-                if person_name == start_name or start_name == '':
+                if person_id == start_id or start_id == '':
                     flag = True
-                    if start_name:
-                        print 'starting from', start_name
+                    if start_id:
+                        print 'starting from', person_dict['name']
                 if not flag:
                     continue
-                self.get_google_page_from(str(person_name), GoogleHelper())
+                self.get_google_page_from(person_dict, GoogleHelper())
         except Exception as e:
             print e
 
     def refresh_empty_pages(self):
-        for person_name in os.listdir(self.result_path):
+        for person_dict in self.person_dict_list:
             try:
-                with open(self.get_page_file_path(person_name)) as search_page:
+                with open(self.get_page_file_path(person_dict['id'])) as search_page:
                     if len(search_page.read()) < 10:
-                        self.get_google_page_from(person_name, GoogleHelper())
+                        self.get_google_page_from(person_dict, GoogleHelper())
             except Exception as e:
                 print e
 

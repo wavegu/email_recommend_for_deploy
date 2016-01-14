@@ -88,6 +88,7 @@ class SVMLight(SVM):
 
     def svm_classify(self, feature_file_path, model_file_path, prediction_file_path):
         cmd = self.svm_dir_path + 'svm_classify ' + feature_file_path + ' ' + model_file_path + ' ' + prediction_file_path + ' > prediction.txt'
+        cmd = cmd.replace('/', '\\')
         print cmd
         process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         process.wait()

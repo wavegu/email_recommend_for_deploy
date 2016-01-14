@@ -1,5 +1,6 @@
 import json
 import re
+import string
 
 __author__ = 'hong'
 
@@ -20,8 +21,10 @@ class AffWordsExtractor:
             aff = person_dict['affiliation']
 
             aff = aff.replace('\n', ' ')
-            aff = aff.replace('.', ' ').replace(',', ' ').replace('|', ' ')
-            aff = aff.replace('(', ' ').replace(')', ' ')
+            # aff = aff.replace('.', ' ').replace(',', ' ').replace('|', ' ')
+            # aff = aff.replace('(', ' ').replace(')', ' ')
+            regex = re.compile('[%s]' % re.escape(string.punctuation))
+            aff = regex.sub(' ', aff)
             aff = re.sub('\s+', ' ', aff).strip(' ')
 
             aff_words = aff.lower().split(' ', -1)

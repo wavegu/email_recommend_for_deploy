@@ -10,6 +10,7 @@ from email_model import EmailModel
 class Person:
 
     def __init__(self, person_dict, google_item_dir_path):
+        self.id = person_dict['id']
         self.name = person_dict['name']
         self.google_item_dir_path = google_item_dir_path
         self.affiliation_word_list = person_dict['affiliation_words']
@@ -27,7 +28,7 @@ class Person:
         return all_email_addr_list
 
     def get_google_item_dict_list(self):
-        with open(self.google_item_dir_path + self.name + '.json') as google_item_file:
+        with open(self.google_item_dir_path + self.id + '.json') as google_item_file:
             self.google_item_dict_list = json.loads(google_item_file.read())
         return self.google_item_dict_list
 
@@ -68,7 +69,7 @@ class Person:
                 self.email_email_model_dict[email_addr] = tem_email_model
 
     def write_feature_file(self, feature_dir_path):
-        feature_file_path = feature_dir_path + self.name.replace(' ', '_') + '.feature'
+        feature_file_path = feature_dir_path + self.id + '.feature'
         with open(feature_file_path, 'w') as feature_file:
             print 'writing feature:', self.name
             if not self.google_item_dict_list:

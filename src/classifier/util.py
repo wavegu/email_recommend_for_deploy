@@ -38,8 +38,24 @@ def is_a_in_b(a, b):
     return False
 
 
+def add_id_to_person_dict_list(person_dict_list, id_name_filename):
+    import codecs
+    id_name_dict = {}
+
+    person_id = -1
+    for person_dict in person_dict_list:
+        name = person_dict['name']
+        person_id += 1
+        id_name_dict[str(person_id)] = name
+        person_dict['id'] = str(person_id)
+
+    with codecs.open(id_name_filename, "w", encoding="utf-8") as f_out:
+        json.dump(id_name_dict, f_out, indent=4, ensure_ascii=False)
+
+    return person_dict_list
+
+
 # get_known_top_1000()
 
 if __name__ == '__main__':
-    get_top_citation()
-    get_known_top_1000()
+    print add_id_to_person_dict_list('../../resource/input_person_list.json', '../../by_product/id_name.json')

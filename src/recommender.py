@@ -10,7 +10,6 @@ import sys
 import locale
 reload(sys)
 sys.setdefaultencoding('utf8')
-locale.setlocale(locale.LC_ALL, '')
 
 
 class EmailRecommender:
@@ -19,6 +18,7 @@ class EmailRecommender:
         self.input_svm_dir_path = '../resource/svm/'
         self.input_aff_stopwords_file_path = '../resource/aff_stopwords.txt'
         self.input_person_list_file_path = '../resource/input_person_list.json'
+        self.output_person_id_name_file_path = '../by_product/id_name.json'
         self.output_google_page_dir_path = '../by_product/google_pages/'
         self.output_google_item_dir_path = '../by_product/google_items/'
         self.output_svm_feature_dir_path = '../by_product/svm/feature/'
@@ -26,6 +26,7 @@ class EmailRecommender:
         self.output_result_csv_path = '../result/result.csv'
         self.output_recommend_json_file_path = '../result/recommend.json'
 
+        create_dir_if_not_exist('../result')
         create_dir_if_not_exist('../by_product/')
         create_dir_if_not_exist('../by_product/svm')
         create_dir_if_not_exist(self.input_svm_dir_path)
@@ -34,9 +35,14 @@ class EmailRecommender:
         create_dir_if_not_exist(self.output_svm_feature_dir_path)
         create_dir_if_not_exist(self.output_svm_prediction_dir_path)
 
+        # 获取待搜索人列表，将其中的affiliation信息作关键词提取处理
         self.person_dict_list = json.loads(open(self.input_person_list_file_path).read())
         aff_words_extractor = AffWordsExtractor(self.input_aff_stopwords_file_path, self.person_dict_list)
         self.person_dict_list = aff_words_extractor.get_person_dict_with_aff_words_list()
+
+        # 建立待搜索人的姓名、id映射（此处id为内部顺序生成）
+        from classifier.util import add_id_to_person_dict_list
+        self.person_dict_list = add_id_to_person_dict_list(self.person_dict_list, self.output_person_id_name_file_path)
 
     def get_google_pages(self):
         from searcher.page_searcher import PageSearcher
@@ -45,7 +51,7 @@ class EmailRecommender:
         google_page_searcher.refresh_empty_pages()
 
     def get_google_items(self):
-        google_item_parser = GoogleItemParser(self.output_google_page_dir_path, self.output_google_item_dir_path)
+        google_item_parser = GoogleItemParser(self.person_dict_list, self.output_google_page_dir_path, self.output_google_item_dir_path)
         google_item_parser.parse_google_items_from_google_pages()
 
     def write_recommend_json(self):
@@ -62,8 +68,8 @@ class EmailRecommender:
             person.write_feature_file(self.output_svm_feature_dir_path)
             # classify and write prediction file
             model_filename = self.input_svm_dir_path + '249.model'
-            feature_filename = self.output_svm_feature_dir_path + person.name.replace(' ', '_') + '.feature'
-            prediction_filename = self.output_svm_prediction_dir_path + person.name.replace(' ', '_') + '.pred'
+            feature_filename = self.output_svm_feature_dir_path + person.id + '.feature'
+            prediction_filename = self.output_svm_prediction_dir_path + person.id + '.pred'
             svm_light = SVMLight(self.input_svm_dir_path)
             svm_light.svm_classify(feature_filename, model_filename, prediction_filename)
             # compare prediction file and email list and get recommend email list
@@ -94,16 +100,15 @@ class EmailRecommender:
                 line += email + '; '
             return line
 
-        column_list = ['name', 'affiliation', 'raw_email', 'recommend_email']
+        column_list = ['name', 'recommend_email', 'affiliation']
         recommend_dict_list = json.loads(open(self.output_recommend_json_file_path).read())
         with open(self.output_result_csv_path, 'w') as csv_file:
             for column in column_list:
                 csv_file.write(column + ',')
             csv_file.write('\n')
             for recommend_dict in recommend_dict_list:
-                csv_file.write(recommend_dict['name'] + ',' + recommend_dict['affiliation'].replace(',', ' ') + ',')
-                recommend_email = get_email_line_from_email_list(recommend_dict['recommend_email_list']) + '\n'
-                csv_file.write(recommend_dict['raw_email'].replace(',', '; ') + ',' + recommend_email)
+                recommend_email = get_email_line_from_email_list(recommend_dict['recommend_email_list'])
+                csv_file.write(recommend_dict['name'] + ',' + recommend_email + ',' + recommend_dict['affiliation'].replace(',', ' ') + '\n')
 
 if __name__ == '__main__':
     recommender = EmailRecommender()

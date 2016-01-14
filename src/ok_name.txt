@@ -1,8 +1,114 @@
 Haitao Li
-Liwei Shi
-Wang Dong-Mei
-Zhang Xiang
-Qian Zhi-Yu
-Gang Cui
-Hong Fan
-Haiyong Luo
+Donghoon Choi
+Hitoshi Arisumi
+Christopher Parlitz
+Luís Lima
+Lung-Wen Tsai
+Nieves Gonzalo
+Festus K. Akinnifesi
+Erwin Prassler
+Federica Chiellini
+Mun-Taek Choi
+Michel Paques
+Christopher Tong
+Reginald L. Lagendijk
+Koji Kamei
+Liu Ming-Zhi
+Barry Cense
+P. Van Der Zaag
+I. Rogachevskii
+Johannes F. De Boer
+Donghoon Choi
+Hitoshi Arisumi
+Christopher Parlitz
+Luís Lima
+Lung-Wen Tsai
+Nieves Gonzalo
+Festus K. Akinnifesi
+Erwin Prassler
+Federica Chiellini
+Mun-Taek Choi
+Michel Paques
+Christopher Tong
+Reginald L. Lagendijk
+Koji Kamei
+Luís Lima
+Vladimir Vapnik
+Peer Bork
+P. Van Der Zaag
+Hamid Mirzadeh
+Jérôme Barraquand
+Dibyendu Nandy
+Siwa Msangi
+Jeff Froyd
+N.A. Peppas
+Chiapin Wang
+Iwona Gorczynska
+Claudia Ringler
+Wolfgang Drexler
+David Lobell
+Réjean Landry
+Tsukasa Ogasawara
+Yoshihiko Nakamura
+Carlo Pinciroli
+Yi-Tian Gao
+Rawichote Chalodhorn
+Huiqing Zhong
+Cemal Yilmaz
+Rainer A. Leitgeb
+Jörg Stückler
+Vincent Duindam
+Wojbor A. Woyczyński
+Michel Taïx
+Marius Mikalsen
+Paul A. Dorosh
+Shenguo Wang
+Piyali Chatterjee
+Jie Tang
+Donghoon Choi
+Hitoshi Arisumi
+Christopher Parlitz
+Luís Lima
+Lung-Wen Tsai
+Nieves Gonzalo
+Festus K. Akinnifesi
+Erwin Prassler
+Federica Chiellini
+Mun-Taek Choi
+Michel Paques
+Christopher Tong
+Reginald L. Lagendijk
+Koji Kamei
+Liu Ming-Zhi
+Barry Cense
+Woojin Chung
+Adrian Podoleanu
+Munir A. Hanjra
+Xiaodong Wu
+Ross A. Knepper
+J. Becedas
+Boris De Ruyter
+Maciej Szkulmowski
+John S. Werner
+Alexandru Patriciu
+Christopher Parlitz
+Festus K. Akinnifesi
+Erwin Prassler
+Federica Chiellini
+Mun-Taek Choi
+Michel Paques
+Christopher Tong
+Reginald L. Lagendijk
+Koji Kamei
+Liu Ming-Zhi
+Barry Cense
+Woojin Chung
+Adrian Podoleanu
+Munir A. Hanjra
+John S. Werner
+Xiaodong Wu
+Ross A. Knepper
+J. Becedas
+Alexandru Patriciu
+Boris De Ruyter
+Maciej Szkulmowski
